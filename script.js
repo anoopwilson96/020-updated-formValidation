@@ -17,6 +17,7 @@ const submitButtonJS = document.getElementById("submitButton");
 function validateInput(inputElement, errorElement, validationFunction, errorMessage) {
   const value = inputElement.value.trim();
   if (validationFunction(value)) {
+    
     errorElement.innerHTML = "";
   } else {
     errorElement.innerHTML = errorMessage;
