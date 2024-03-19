@@ -88,7 +88,17 @@ header div{
 }
 
 
+#loggedIn{
 
+  margin-top: 2rem;
+  background:linear-gradient(109.6deg, rgb(0, 204, 130) 11.2%, rgb(58, 181, 46) 91.7%);
+  padding: .5rem;
+  border-radius: 5rem;
+  font-size: 1.52rem;
+}
+#loggedin{
+  margin-top: 2rem;
+}
 
 
 /* 
@@ -97,3 +107,4 @@ header div{
 <span id="passwordError1">Password must contain at least one uppercase letter, one lowercase letter, one special character, one digit, and be at least 8 characters long.</span>
 <span id="totalError">Please fill in all required fields.</span>
 */
+window.location.href = "login.html";
