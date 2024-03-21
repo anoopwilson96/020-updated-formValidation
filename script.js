@@ -51,7 +51,11 @@ submitButtonJS.addEventListener("click", function (event) {
                    passwordError1JS.innerHTML !== "" ||
                    passwordError2JS.innerHTML !== "";
 
-  if (hasError) {
+  if (!hasError) {
+    // Redirect to login page
+    window.location.href = "./login.html"; 
+    event.preventDefault(); 
+  } else {
     event.preventDefault(); // Prevent form submission if there are errors
   }
 });
@@ -66,7 +70,7 @@ emailInputJS.addEventListener("input", function () {
 });
 
 passwordInput1JS.addEventListener("input", function () {
-  validateInput(passwordInput1JS, passwordError1JS, validatePassword, "Password must meet complexity requirements.");
+  validateInput(passwordInput1JS, passwordError1JS, validatePassword, "Password must contain at least one uppercase letter, one lowercase letter, one special character, one digit, and be at least 8 characters long.");
 });
 
 passwordInput2JS.addEventListener("input", function () {
